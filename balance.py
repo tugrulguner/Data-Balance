@@ -5,6 +5,7 @@ def balance(train, target, sampling_amount):
 # For example, balance(trainingdata, 'target', 'mean') automatically balances target data unique value counts to mean of
 # target values amount. Let's say we have 0, 1, 2, 3 unique values and 5, 10, 10, 50 are the value counts in target dataset.
 # As a result of this function, 0, 1, 2, 3 values automatically becomes 19, 19, 19, 19 as value counts.
+# Created by Tugrul Guner, 2020.
     degerler = train[target].value_counts()
     if sampling_amount is 'mean' or 'Mean':
         rounded = int(np.round(degerler.values.mean()))
